@@ -8,7 +8,6 @@ content-type: application/json
   "url": "https://media1.giphy.com/media/0Wzkc9iirQ4ZI7JoaD/giphy.gif?cid=790b7611278234535d01794f7a5b45683ac35421dfe4b97b&rid=giphy.gif&ct=g"
 }
 ###
-
 PUT http://localhost:3333/reactqrs/1
 content-type: application/json
 
@@ -42,3 +41,5 @@ content-type: application/json
   "flutter": false
 }
 ###
+
+PUT http://localhost:3333/update
