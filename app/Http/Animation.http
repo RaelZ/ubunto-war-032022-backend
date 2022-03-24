@@ -1,0 +1,26 @@
+GET http://127.0.0.1:3333/
+###
+GET http://127.0.0.1:3333/animations/
+###
+GET http://127.0.0.1:3333/animations/1
+###
+DELETE http://127.0.0.1:3333/animations/1
+###
+POST http://127.0.0.1:3333/animations
+content-type: application/json
+
+{
+  "url": "http://xxxxxxxxxxxxxxxxx",
+  "react": false,
+  "flutter": false
+}
+###
+PUT http://127.0.0.1:3333/animations/1 HTTP/1.1
+content-type: application/json
+
+{
+  "url": "http://xxxxxxxxxxxxxxxxx",
+  "react": true,
+  "flutter": true
+}
+###
