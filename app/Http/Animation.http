@@ -1,12 +1,30 @@
-GET http://127.0.0.1:3333/
+GET http://localhost:3333/
 ###
-GET http://127.0.0.1:3333/animations/
+
+PUT http://localhost:3333/flutterqrs/1
+content-type: application/json
+
+{
+  "url": "https://media1.giphy.com/media/0Wzkc9iirQ4ZI7JoaD/giphy.gif?cid=790b7611278234535d01794f7a5b45683ac35421dfe4b97b&rid=giphy.gif&ct=g"
+}
 ###
-GET http://127.0.0.1:3333/animations/1
+
+PUT http://localhost:3333/reactqrs/1
+content-type: application/json
+
+{
+  "url": "https://media1.giphy.com/media/0Wzkc9iirQ4ZI7JoaD/giphy.gif?cid=790b7611278234535d01794f7a5b45683ac35421dfe4b97b&rid=giphy.gif&ct=g"
+}
 ###
-DELETE http://127.0.0.1:3333/animations/1
+
+
+GET http://localhost:3333/animations/
 ###
-POST http://127.0.0.1:3333/animations
+GET http://localhost:3333/animations/1
+###
+DELETE http://localhost:3333/animations/1
+###
+POST http://localhost:3333/animations
 content-type: application/json
 
 {
@@ -15,12 +33,12 @@ content-type: application/json
   "flutter": false
 }
 ###
-PUT http://127.0.0.1:3333/animations/1 HTTP/1.1
+PUT http://localhost:3333/animations/1 HTTP/1.1
 content-type: application/json
 
 {
-  "url": "http://xxxxxxxxxxxxxxxxx",
-  "react": true,
-  "flutter": true
+  "url": "https://media1.giphy.com/media/0Wzkc9iirQ4ZI7JoaD/giphy.gif?cid=790b7611278234535d01794f7a5b45683ac35421dfe4b97b&rid=giphy.gif&ct=g",
+  "react": false,
+  "flutter": false
 }
 ###

@@ -5,3 +5,5 @@ Route.get("/", async () => {
 });
 
 Route.resource("animations", "AnimationsController").apiOnly();
+Route.resource("reactqrs", "ReactQrsController").apiOnly();
+Route.resource("flutterqrs", "FlutterQrsController").apiOnly();

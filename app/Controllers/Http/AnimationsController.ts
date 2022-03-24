@@ -3,27 +3,27 @@ import Animation from "App/Models/Animation";
 
 export default class AnimationsController {
   public async index({}: HttpContextContract) {
-    const task = await Animation.all();
-    return task;
+    const animation = await Animation.all();
+    return animation;
   }
   public async store({ request }: HttpContextContract) {
     const data = request.all();
-    const task = await Animation.create(data);
-    return task;
+    const animation = await Animation.create(data);
+    return animation;
   }
   public async show({ params }: HttpContextContract) {
-    const task = await Animation.findOrFail(params.id);
-    return task;
+    const animation = await Animation.findOrFail(params.id);
+    return animation;
   }
   public async update({ request, params }: HttpContextContract) {
-    const task = await Animation.findOrFail(params.id);
+    const animation = await Animation.findOrFail(params.id);
     const data = request.all();
-    task.merge(data);
-    await task.save();
-    return task;
+    animation.merge(data);
+    await animation.save();
+    return animation;
   }
   public async destroy({ params }: HttpContextContract) {
-    const task = await Animation.findOrFail(params.id);
-    await task.delete();
+    const animation = await Animation.findOrFail(params.id);
+    await animation.delete();
   }
 }
